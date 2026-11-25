@@ -13,3 +13,5 @@ if (trimmed !== REPLY) {
 
 mkdirSync("/output", { recursive: true });
 writeFileSync("/output/entry.txt", REPLY + "\n", "utf8");
+// Keep the reply as one tidy line with no extra blank lines or trailing spaces.
+// Validate the reply text first, and only write the file once that check passes.
